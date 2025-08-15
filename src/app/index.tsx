@@ -9,11 +9,11 @@ export default function Index() {
   )
 }
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create(theme => ({
   content: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'red'
+    backgroundColor: theme.colors['grey-50']
   }
-})
+}))
