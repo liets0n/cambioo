@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-object-type */
 
+import { Appearance } from 'react-native'
 import { StyleSheet } from 'react-native-unistyles'
 
 const baseColors = {
@@ -48,15 +49,16 @@ const appThemes = {
   dark: darkTheme
 }
 
-type AppThemes = typeof appThemes
+const systemTheme = Appearance.getColorScheme() ?? 'light'
 
+type AppThemes = typeof appThemes
 declare module 'react-native-unistyles' {
   export interface UnistylesThemes extends AppThemes {}
 }
 
 StyleSheet.configure({
   settings: {
-    initialTheme: 'light'
+    initialTheme: systemTheme
   },
   themes: appThemes
 })

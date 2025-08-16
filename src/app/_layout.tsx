@@ -1,5 +1,31 @@
 import { Stack } from 'expo-router'
+import { StatusBar, useColorScheme } from 'react-native'
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context'
+import { useUnistyles } from 'react-native-unistyles'
 
 export default function RootLayout() {
-  return <Stack />
+  const colorScheme = useColorScheme()
+  const { theme } = useUnistyles()
+
+  return (
+    <>
+      <SafeAreaProvider>
+        <SafeAreaView
+          style={{
+            flex: 1,
+            backgroundColor:
+              colorScheme === 'dark' ? theme.colors.black : theme.colors.white
+          }}
+        >
+          <Stack>
+            <Stack.Screen name='(tabs)' options={{ headerShown: false }} />
+          </Stack>
+        </SafeAreaView>
+
+        <StatusBar
+          barStyle={colorScheme === 'dark' ? 'light-content' : 'dark-content'}
+        />
+      </SafeAreaProvider>
+    </>
+  )
 }
