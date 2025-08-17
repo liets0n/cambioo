@@ -15,15 +15,15 @@ export default function TabLayout() {
           height: 64,
           backgroundColor:
             colorScheme === 'dark' ? theme.colors.black : theme.colors.white,
-          borderColor: theme.colors['grey-300']
+          borderColor: theme.colors.grey[300]
         },
         tabBarLabelStyle: {
           marginTop: 4,
           fontSize: 12,
           fontFamily: theme.fonts.medium
         },
-        tabBarActiveTintColor: theme.colors['grey-950'],
-        tabBarInactiveTintColor: theme.colors['grey-500']
+        tabBarActiveTintColor: theme.colors.grey[950],
+        tabBarInactiveTintColor: theme.colors.grey[500]
       }}
     >
       <Tabs.Screen
