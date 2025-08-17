@@ -3,6 +3,12 @@
 import { Appearance } from 'react-native'
 import { StyleSheet } from 'react-native-unistyles'
 
+const fonts = {
+  regular: 'Poppins_400Regular',
+  medium: 'Poppins_500Medium',
+  bold: 'Poppins_700Bold'
+}
+
 const baseColors = {
   white: '#fff',
   black: '#000'
@@ -23,7 +29,8 @@ const lightTheme = {
     'grey-950': '#09090b',
 
     ...baseColors
-  }
+  },
+  fonts
 }
 
 const darkTheme = {
@@ -41,7 +48,8 @@ const darkTheme = {
     'grey-50': '#09090b',
 
     ...baseColors
-  }
+  },
+  fonts
 }
 
 const appThemes = {
@@ -49,12 +57,12 @@ const appThemes = {
   dark: darkTheme
 }
 
-const systemTheme = Appearance.getColorScheme() ?? 'light'
-
 type AppThemes = typeof appThemes
 declare module 'react-native-unistyles' {
   export interface UnistylesThemes extends AppThemes {}
 }
+
+const systemTheme = Appearance.getColorScheme() ?? 'light'
 
 StyleSheet.configure({
   settings: {

@@ -19,7 +19,8 @@ export default function TabLayout() {
         },
         tabBarLabelStyle: {
           marginTop: 4,
-          fontSize: 12
+          fontSize: 12,
+          fontFamily: theme.fonts.medium
         },
         tabBarActiveTintColor: theme.colors['grey-950'],
         tabBarInactiveTintColor: theme.colors['grey-500']
