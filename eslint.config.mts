@@ -2,7 +2,6 @@
 
 import js from '@eslint/js'
 import expoConfig from 'eslint-config-expo/flat'
-import eslintConfigPrettier from 'eslint-config-prettier/flat'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import pluginReact from 'eslint-plugin-react'
 import { defineConfig } from 'eslint/config'
@@ -30,6 +29,5 @@ export default defineConfig([
       }
     }
   },
-  eslintConfigPrettier,
   eslintPluginPrettierRecommended
 ])

@@ -7,5 +7,5 @@
   "quoteProps": "as-needed",
   "trailingComma": "none",
   "arrowParens": "avoid",
-  "endOfLine": "auto"
+  "endOfLine": "lf"
 }
