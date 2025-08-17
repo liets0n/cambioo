@@ -1,5 +1,5 @@
 {
   "./**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}": ["npm run lint", "npm run format"],
-  "./**/*.{ts,tsx}": ["npm run typecheck"],
+  "./**/*.{ts,tsx}": ["npm run type-check"],
   "*.{json,md}": ["prettier --write"]
 }

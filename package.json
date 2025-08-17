@@ -11,7 +11,8 @@
     "lint:expo": "expo lint",
     "lint": "eslint . --fix --report-unused-disable-directives --max-warnings 0",
     "format": "prettier . --write",
-    "typecheck": "npx tsc-files --noEmit",
+    "type-check": "npx tsc-files --noEmit",
+    "pre-push-check": "npm run lint && npm run type-check && npx expo-doctor",
     "commit": "cz",
     "prepare": "husky"
   },
