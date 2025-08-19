@@ -12,18 +12,18 @@ export default function TabLayout() {
       screenOptions={{
         headerShown: false,
         tabBarStyle: {
-          height: 64,
+          height: 56,
           backgroundColor:
             colorScheme === 'dark' ? theme.colors.black : theme.colors.white,
           borderColor: theme.colors.grey[300]
         },
         tabBarLabelStyle: {
-          marginTop: 4,
-          fontSize: 12,
+          marginTop: 1,
+          fontSize: 10,
           fontFamily: theme.fonts.medium
         },
-        tabBarActiveTintColor: theme.colors.grey[950],
-        tabBarInactiveTintColor: theme.colors.grey[500]
+        tabBarActiveTintColor: theme.colors.grey[800],
+        tabBarInactiveTintColor: theme.colors.grey[800]
       }}
     >
       <Tabs.Screen
